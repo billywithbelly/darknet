@@ -1,3 +1,7 @@
+# billy
+to run webcam:./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights
+to run video:./darknet detector demo cfg/coco.data cfg/yolo.cfg yolo.weights <video file>
+
 ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png)
 
 #Darknet#

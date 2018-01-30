@@ -4,6 +4,7 @@
 #include "cuda.h"
 #include <stdio.h>
 #include <math.h>
+#include "string.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -251,7 +252,9 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
                     strcat(labelstr, ", ");
                     strcat(labelstr, names[j]);
                 }
-                printf("%s: %.0f%%\n", names[j], probs[i][j]*100);
+                printf("%s detected: %.0f%%\n", names[j], probs[i][j]*100);
+                if (!strcmp(names[j], "car"))
+                    printf("I found a car~\n");
             }
         }
         if(class >= 0){
